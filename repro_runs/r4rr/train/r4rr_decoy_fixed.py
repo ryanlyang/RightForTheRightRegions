@@ -335,7 +335,7 @@ def main():
     args = parser.parse_args()
 
     repro_root = Path(__file__).resolve().parents[2]
-    default_png_root = repro_root / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+    default_png_root = repro_root / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
     png_root = args.png_root or str(default_png_root.resolve())
 
     use_cuda = not args.no_cuda and torch.cuda.is_available()

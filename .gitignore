@@ -87,7 +87,7 @@ data/waterbird_complete95_forest2water2/
 data/waterbird_1.0_forest2water2/
 data/food-101*/
 data/DecoyMNIST_png/
-repro_runs/third_party/MakeMNIST/data/
+repro_runs/third_party/CDEP/data/
 repro_runs/third_party/group_DRO/logs/
 
 # ------------------------------

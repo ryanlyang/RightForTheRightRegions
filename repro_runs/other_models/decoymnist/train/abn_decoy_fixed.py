@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ABN-style DecoyMNIST CNN with CDEP-style optimizer/split setup.
 
-Same behavior as the MakeMNIST runner, plus optional best-checkpoint saving.
+Same behavior as the CDEP runner, plus optional best-checkpoint saving.
 """
 
 from __future__ import print_function
@@ -214,7 +214,7 @@ def main():
     args = parser.parse_args()
 
     repro_root = Path(__file__).resolve().parents[3]
-    default_png_root = repro_root / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+    default_png_root = repro_root / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
     png_root = args.png_root or str(default_png_root.resolve())
 
     use_cuda = not args.no_cuda and torch.cuda.is_available()

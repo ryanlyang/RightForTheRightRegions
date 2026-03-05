@@ -248,7 +248,7 @@ def train_one_seed(args, seed: int, full_train: GuidedImageFolder, test_dataset:
 
 def main() -> None:
     repro_root = Path(__file__).resolve().parents[3]
-    default_png_root = repro_root / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+    default_png_root = repro_root / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
     default_mask_root = default_png_root / "clip_rn50_attention_gradcam"
 
     parser = argparse.ArgumentParser(description="DecoyMNIST LeNet with fixed GALS-style RRR loss")

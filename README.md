@@ -35,7 +35,7 @@ RightForTheRightRegions/
 │   ├── other_models/
 │   └── third_party/
 │       ├── GALS/
-│       ├── MakeMNIST/
+│       ├── CDEP/
 │       ├── afr/
 │       └── group_DRO/
 └── WeCLIPPlus/
@@ -131,10 +131,10 @@ Generate DecoyMNIST arrays + PNG layout via:
 python data/make_decoymnist_pngs.py
 ```
 
-This runs MakeMNIST's `00_make_data.py` and writes:
+This runs CDEP's `00_make_data.py` and writes:
 
 ```text
-repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png/
+repro_runs/third_party/CDEP/data/DecoyMNIST_png/
 ├── train/<digit>/*.png
 └── test/<digit>/*.png
 ```
@@ -259,8 +259,8 @@ python pipelines/generate_gals_maps/run_generate_redmeat_vit_attentions.py \
 ```bash
 conda activate r4rr-runs
 python pipelines/generate_gals_maps/run_generate_decoymnist_rn50_attentions.py \
-  --png-root "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png" \
-  --output-root "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png/clip_rn50_attention_gradcam"
+  --png-root "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png" \
+  --output-root "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png/clip_rn50_attention_gradcam"
 ```
 
 ---
@@ -325,8 +325,8 @@ python pipelines/train_CNN/recreate_redmeat_runs.py \
 ```bash
 conda activate r4rr-runs
 python pipelines/train_CNN/recreate_decoymnist_runs.py \
-  --png-root "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png" \
-  --teacher-map-path "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png/clip_rn50_attention_gradcam"
+  --png-root "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png" \
+  --teacher-map-path "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png/clip_rn50_attention_gradcam"
 ```
 
 Tip: add `--dry-run` to any wrapper to print commands without executing training.
@@ -364,8 +364,8 @@ python repro_runs/r4rr/train/r4rr_redmeat.py \
 
 ```bash
 python repro_runs/r4rr/train/r4rr_decoy_fixed.py \
-  --png-root "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png" \
-  --teacher-map-path "$PWD/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png/clip_rn50_attention_gradcam" \
+  --png-root "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png" \
+  --teacher-map-path "$PWD/repro_runs/third_party/CDEP/data/DecoyMNIST_png/clip_rn50_attention_gradcam" \
   --attention-epoch 7 --kl-lambda 495.61 --lr 0.001 --epochs 19
 ```
 

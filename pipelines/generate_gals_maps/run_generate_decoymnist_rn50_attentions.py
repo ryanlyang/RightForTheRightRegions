@@ -83,7 +83,7 @@ def _generic_prompts(prompts_text: str) -> List[str]:
 def _resolve_default_png_root() -> Path:
     here = Path(__file__).resolve().parent
     candidates = [
-        here.parent / "MakeMNIST" / "data" / "DecoyMNIST_png",
+        here.parent / "CDEP" / "data" / "DecoyMNIST_png",
         here / "data" / "DecoyMNIST_png",
         Path.cwd() / "data" / "DecoyMNIST_png",
     ]

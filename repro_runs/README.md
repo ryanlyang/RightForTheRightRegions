@@ -10,6 +10,6 @@ This folder is organized for paper-facing reproducibility.
 - `redmeat/baselines`: zero-shot / non-training baselines.
 - `decoymnist/train`: fixed training/repro runners.
 - `decoymnist/baselines`: zero-shot / non-training baselines.
-- `third_party`: external dependency code kept vendored and untouched (`GALS`, `MakeMNIST`, `afr`, `group_DRO`).
+- `third_party`: external dependency code kept vendored and untouched (`GALS`, `CDEP`, `afr`, `group_DRO`).
 
 Path handling in runners is now anchored to `repro_runs/third_party/*` so scripts remain runnable after this reorganization.

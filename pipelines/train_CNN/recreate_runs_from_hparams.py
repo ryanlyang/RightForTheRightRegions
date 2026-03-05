@@ -837,13 +837,13 @@ def _decoy_run(args: argparse.Namespace) -> List[Dict[str, Any]]:
     hp = data["decoymnist_hparams"]
 
     png_root = Path(args.png_root).expanduser().resolve() if args.png_root else (
-        REPO_ROOT / "repro_runs" / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+        REPO_ROOT / "repro_runs" / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
     )
     if not png_root.is_dir():
         raise FileNotFoundError(f"Missing PNG root: {png_root}")
 
     teacher_map = Path(args.teacher_map_path).expanduser().resolve() if args.teacher_map_path else (
-        REPO_ROOT / "repro_runs" / "third_party" / "MakeMNIST" / "data" / "clip_rn50_attention_gradcam"
+        REPO_ROOT / "repro_runs" / "third_party" / "CDEP" / "data" / "DecoyMNIST_png" / "clip_rn50_attention_gradcam"
     )
 
     run_root = Path(args.output_dir).expanduser().resolve() if args.output_dir else (

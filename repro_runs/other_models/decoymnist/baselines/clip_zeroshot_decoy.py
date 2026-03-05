@@ -240,7 +240,7 @@ def main() -> None:
     args = p.parse_args()
 
     repo_root = _repo_root()
-    default_png_root = repo_root / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+    default_png_root = repo_root / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
     png_root = Path(args.png_root).expanduser().resolve() if args.png_root else default_png_root.resolve()
     split_dir = png_root / args.split
     if not split_dir.exists():

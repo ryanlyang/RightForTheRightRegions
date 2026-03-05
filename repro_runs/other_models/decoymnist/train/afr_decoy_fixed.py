@@ -334,7 +334,7 @@ def train_stage2_head(
 
 def build_parser() -> argparse.ArgumentParser:
     repro_root = Path(__file__).resolve().parents[3]
-    default_png_root = repro_root / "third_party" / "MakeMNIST" / "data" / "DecoyMNIST_png"
+    default_png_root = repro_root / "third_party" / "CDEP" / "data" / "DecoyMNIST_png"
 
     parser = argparse.ArgumentParser(description="AFR-style fixed run on DecoyMNIST with LeNet")
     parser.add_argument("--png-root", type=str, default=str(default_png_root.resolve()))

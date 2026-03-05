@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Generate DecoyMNIST PNG folders from MakeMNIST decoy arrays.
+"""Generate DecoyMNIST PNG folders from CDEP decoy arrays.
 
 Pipeline:
-1) Run MakeMNIST DecoyMNIST data generator (00_make_data.py).
+1) Run CDEP DecoyMNIST data generator (00_make_data.py).
 2) Read generated .npy arrays (train_x_decoy.npy / test_x_decoy.npy).
 3) Export PNGs to:
      <output-root>/train/<digit>/*.png
      <output-root>/test/<digit>/*.png
 
 Default output root is compatible with existing repro runners:
-  repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png
+  repro_runs/third_party/CDEP/data/DecoyMNIST_png
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ from torchvision.datasets import MNIST
 
 def _default_repo_root() -> Path:
     here = Path(__file__).resolve()
-    marker = Path("repro_runs") / "third_party" / "MakeMNIST" / "mnist" / "DecoyMNIST" / "00_make_data.py"
+    marker = Path("repro_runs") / "third_party" / "CDEP" / "mnist" / "DecoyMNIST" / "00_make_data.py"
     for candidate in here.parents:
         if (candidate / marker).exists():
             return candidate
@@ -93,12 +93,12 @@ def _export_split_pngs(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate DecoyMNIST_png by running MakeMNIST decoy generator.")
+    parser = argparse.ArgumentParser(description="Generate DecoyMNIST_png by running CDEP decoy generator.")
     parser.add_argument(
         "--repo-root",
         type=Path,
         default=_default_repo_root(),
-        help="Repository root (default: auto-detected by searching parent directories for repro_runs/third_party/MakeMNIST).",
+        help="Repository root (default: auto-detected by searching parent directories for repro_runs/third_party/CDEP).",
     )
     parser.add_argument(
         "--output-root",
@@ -106,7 +106,7 @@ def main() -> None:
         default=None,
         help=(
             "Where to write PNG folders. Default: "
-            "<repo-root>/repro_runs/third_party/MakeMNIST/data/DecoyMNIST_png"
+            "<repo-root>/repro_runs/third_party/CDEP/data/DecoyMNIST_png"
         ),
     )
     parser.add_argument(
@@ -122,7 +122,7 @@ def main() -> None:
     args = parser.parse_args()
 
     repo_root = args.repo_root.resolve()
-    makemnist_root = repo_root / "repro_runs" / "third_party" / "MakeMNIST"
+    makemnist_root = repo_root / "repro_runs" / "third_party" / "CDEP"
     make_data_script = makemnist_root / "mnist" / "DecoyMNIST" / "00_make_data.py"
     data_root = makemnist_root / "data"
     color_root = data_root / "ColorMNIST"
@@ -148,7 +148,7 @@ def main() -> None:
             f"  {test_x_path}"
         )
 
-    # Labels come from canonical MNIST labels in the same MakeMNIST data root.
+    # Labels come from canonical MNIST labels in the same CDEP data root.
     train_labels = np.asarray(MNIST(root=str(data_root), train=True, download=True).targets)
     test_labels = np.asarray(MNIST(root=str(data_root), train=False, download=True).targets)
 
