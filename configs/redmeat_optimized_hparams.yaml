@@ -4,20 +4,17 @@
 redmeat_optimized_hparams:
   vanilla:
     best_trial: 1
-    best_value: 0.6688
     base_lr: 0.0016966944834563556
     classifier_lr: 0.001036350233934804
 
   abn:
     best_trial: 49
-    best_value: 0.6592
     base_lr: 0.006162827507797648
     classifier_lr: 0.00037743153141157697
     abn_cls_weight: 0.606716656420794
 
   upweight:
     best_trial: 30
-    best_value: 0.6552
     base_lr: 0.0021504262326653436
     classifier_lr: 0.0016660124273211814
 
@@ -32,7 +29,6 @@ redmeat_optimized_hparams:
 
   gals_rrr_rn50_maps:
     best_trial: 36
-    best_value: 0.6855999999999999
     base_lr: 0.00023833918106007227
     classifier_lr: 2.446109613251567e-05
     grad_weight: 14980.909916459295
@@ -40,7 +36,6 @@ redmeat_optimized_hparams:
 
   gals_rrr_vit_maps:
     best_trial: 24
-    best_value: 0.6784
     base_lr: 0.0001626603363687077
     classifier_lr: 2.5961178117275155e-05
     grad_weight: 13374.682497120111
@@ -48,21 +43,18 @@ redmeat_optimized_hparams:
 
   gals_abn_vit_maps:
     best_trial: 22
-    best_value: 0.6752
     base_lr: 0.007203791420251967
     classifier_lr: 0.00018332753693291344
     abn_att_weight: 18.70360291165618
 
   gals_gradcam_vit_maps:
     best_trial: 31
-    best_value: 0.6799999999999999
     base_lr: 0.006440079741460147
     classifier_lr: 0.0004251610658278016
     cam_weight: 6.05708650532269
 
   gals_our_masks:
     best_trial: 41
-    best_value: 0.6712
     base_lr: 9.734963469259212e-05
     classifier_lr: 0.0001615599778885924
     grad_weight: 39063.958555144236

@@ -4,21 +4,18 @@
 waterbirds100_optimized_hparams:
   vanilla:
     best_trial: 9
-    best_value: 0.7453688859675842
     base_lr: 0.031210590691245817
     classifier_lr: 0.0008517287145349147
     momentum: 0.8914661939990524
 
   abn:
     best_trial: 43
-    best_value: 0.7318302419160909
     base_lr: 0.027933817440579763
     classifier_lr: 0.0008096689727354128
     abn_cls_weight: 3.2547104257357056
 
   upweight:
     best_trial: 28
-    best_value: 0.7101535822498677
     base_lr: 0.029039631505422818
     classifier_lr: 9.11321114874417e-05
 
@@ -30,15 +27,9 @@ waterbirds100_optimized_hparams:
     reg: 0.0
     best_val_wga: 0.3476
     best_test_at_val: 0.3326
-    best_test_groups:
-      - 0.9965
-      - 0.3326
-      - 0.3801
-      - 0.9751
 
   gals_rrr_rn50_maps:
     best_trial: 40
-    best_value: 0.736214870865864
     base_lr: 0.005944575911274434
     classifier_lr: 9.490572167826894e-05
     grad_weight: 72503.48035960984
@@ -46,7 +37,6 @@ waterbirds100_optimized_hparams:
 
   gals_rrr_vit_maps:
     best_trial: 22
-    best_value: 0.7392087628452795
     base_lr: 0.01906797717764731
     classifier_lr: 0.0005160317852697908
     grad_weight: 97631.97904483072
@@ -54,21 +44,18 @@ waterbirds100_optimized_hparams:
 
   gals_abn_vit_maps:
     best_trial: 14
-    best_value: 0.7574707023422095
     base_lr: 0.06982314545327961
     classifier_lr: 0.0015704352233420818
     abn_att_weight: 0.49900348131069727
 
   gals_gradcam_vit_maps:
     best_trial: 44
-    best_value: 0.7703320134023759
     base_lr: 0.03954105556061286
     classifier_lr: 9.935665362140806e-05
     cam_weight: 0.09129136575507206
 
   gals_our_masks:
     best_trial: 32
-    best_value: 0.8043068759318339
     base_lr: 0.027832168464276615
     classifier_lr: 1.0338288372941498e-05
     grad_weight: 60190.65400934708
@@ -76,7 +63,6 @@ waterbirds100_optimized_hparams:
 
   r4rr_gals_rn50_maps:
     best_trial: 20
-    best_value: 0.8852060855764143
     attention_epoch: 109
     kl_lambda: 288.89703257693924
     base_lr: 3.982887304406873e-05
@@ -85,7 +71,6 @@ waterbirds100_optimized_hparams:
 
   r4rr_gals_vit_maps:
     best_trial: 15
-    best_value: 0.8649963127434792
     attention_epoch: 166
     kl_lambda: 460.7769276807326
     base_lr: 0.00012950411321143717
