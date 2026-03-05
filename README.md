@@ -428,7 +428,7 @@ This repo vendors and builds on:
 - GALS: `repro_runs/third_party/GALS`
 - Group DRO: `repro_runs/third_party/group_DRO`
 - AFR: `repro_runs/third_party/afr`
-- MakeMNIST: `repro_runs/third_party/MakeMNIST`
+- CDEP: `repro_runs/third_party/CDEP`
 - WeCLIPPlus: `WeCLIPPlus`
 
 Please cite original works when using their components.
